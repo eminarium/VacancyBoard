@@ -1,0 +1,15 @@
+<div class="rounded-lg shadow-lg p-6">
+  <%= form_with(model: @department, local: true, data: { turbo: false }) do |form| %>
+    <div class="mt-4">
+      <%= form.label :title, class: "block text-sm text-gray-700" %>
+      <%= form.text_field :title, class: "rounded w-full mt-2" %>
+    </div>
+    <div class="mt-6">
+      <%= form.label :notes, class: "block text-sm text-gray-700" %>
+      <%= form.text_area :notes, class: "rounded w-full mt-2" %>
+    </div>
+    <div class="mt-4">
+      <%= form.submit "Submit", class: "rounded bg-indigo-600 uppercase text-white shadow-md px-6 py-2.5 font-medium hover:bg-indigo-700 hover:shadow-lg" %>
+    </div>
+  <% end %>
+</div>
